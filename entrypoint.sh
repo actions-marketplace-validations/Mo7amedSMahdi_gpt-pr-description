@@ -14,7 +14,7 @@ else
     pull_request_id="$INPUT_PULL_REQUEST_ID"
 fi
 
-/action/generate_pr.py \
+python3 generate_pr.py \
     --github-api-url "$GITHUB_API_URL" \
     --github-token "$INPUT_GITHUB_TOKEN" \
     --pull-request-id "$pull_request_id" \
