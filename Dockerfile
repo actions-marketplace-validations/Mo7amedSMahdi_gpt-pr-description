@@ -3,10 +3,10 @@ FROM python:3.11-slim-buster
 RUN apt-get update
 RUN apt-get -y install jq
 
-COPY entrypoint.sh /action/entrypoint.sh
-COPY generate_pr.py /action/generate_pr.py
-COPY requirements.txt /action/requirements.txt
+COPY entrypoint.sh entrypoint.sh
+COPY generate_pr.py generate_pr.py
+COPY requirements.txt requirements.txt
 
-RUN pip3 install -r /action/requirements.txt
+RUN pip3 install -r requirements.txt
 
-ENTRYPOINT ["/action/entrypoint.sh"]
+ENTRYPOINT ["entrypoint.sh"]
