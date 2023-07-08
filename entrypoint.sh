@@ -1,5 +1,4 @@
 #!/bin/sh
-chmod +x entrypoint.sh
 
 set -eu
 
